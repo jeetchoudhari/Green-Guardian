@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Guardian</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://static.wixstatic.com/media/468f2d_c8c0063071ec4509ba9b0a73df57ff2d~mv2.jpg/v1/fill/w_1480,h_832,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/468f2d_c8c0063071ec4509ba9b0a73df57ff2d~mv2.jpg');
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    /* Additional styling if needed */
+}
+
+
+        header {
+            color: rgb(2, 0, 0);
+            padding: 15px;
+            font-size: 24px;
+
+        }
+        .image {
+        width: 30px; /* set the width of the image */
+        height: 20px; /* set the height of the image */
+        }
+
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            background-color:#e5ffe1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(14, 17, 167);;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Green Guardian</h1>
+        </header>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <label for="image">Choose an image:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+        <br><br>
+        <input type="submit" value="Upload"></form>
+</body>
+</html>

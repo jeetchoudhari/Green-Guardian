@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            background-image: url('https://static.wixstatic.com/media/468f2d_c8c0063071ec4509ba9b0a73df57ff2d~mv2.jpg/v1/fill/w_1480,h_832,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/468f2d_c8c0063071ec4509ba9b0a73df57ff2d~mv2.jpg');
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        .result-container {
+            margin: 20px;
+            padding: 20px;
+            background-color:#c39797;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .error {
+            color: #FF0000;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: rgb(14, 17, 167);
+        }
+    </style>
+</head>
+<body>
+    <h1>Result Page</h1>
+
+    <div class="result-container">
+        {% if error %}
+            <p class="error">Error: {{ error }}</p>
+        {% else %}
+            <h3>Type: {{ data1 }}</h3>
+        {% endif %}
+        <br>
+
+        {% if image_path %}
+            <img src="{{ image_path }}" alt="Uploaded Image">
+        {% endif %}
+        <br><br>
+        <!-- Add a button/link to go back to the homepage -->
+        <a href="{{ url_for('index') }}">Go to Homepage</a>
+    </div>
+</body>
+</html>
+
