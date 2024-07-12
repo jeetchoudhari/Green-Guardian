@@ -12,7 +12,7 @@ import cv2
 file_id = '10SkakNrC0Rwdm-jiQAadrnOptrq6Ni5V'
 
 # Define where to save the model locally
-model_path = '/waste.h5'
+model_path = 'waste.h5'
 
 # Download the file from Google Drive
 gdown.download(f'https://drive.google.com/uc?id={file_id}', model_path, quiet=False)
