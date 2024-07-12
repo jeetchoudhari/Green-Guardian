@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import pickle
+import gdown
 import numpy as np
 from PIL import Image
 from io import BytesIO
@@ -7,8 +8,21 @@ from keras.models import load_model
 import base64
 import cv2
 
+# Define the file ID from Google Drive
+file_id = '10SkakNrC0Rwdm-jiQAadrnOptrq6Ni5V'
+
+# Define where to save the model locally
+model_path = '/waste.h5'
+
+# Download the file from Google Drive
+gdown.download(f'https://drive.google.com/uc?id={file_id}', model_path, quiet=False)
+
+# Load the model
+model = load_model(model_path)
+
+
 #model = pickle.load(open('file.pkl','rb'))
-model = load_model('waste.h5')
+#model = load_model('waste.h5')
 
 app = Flask(__name__)
 
