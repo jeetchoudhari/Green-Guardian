@@ -3,6 +3,8 @@ Green Guardian, an ingenious waste classification application. Employing sophist
 The application provides an efficient and user-friendly interface for individuals and communities seeking to contribute to environmentally responsible waste disposal practices.
 <br><br>
 
+**Test App here:** https://huggingface.co/spaces/jeetch7/Green-Guardian
+
 **How to run:** 
 1. Install required packages(Flask)
 2. Run the file app.py using "python3 app.py" <br>
